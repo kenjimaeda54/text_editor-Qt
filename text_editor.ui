@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Text_Editor</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="assets.qrc">
+    <normaloff>:/assets/edit.png</normaloff>:/assets/edit.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTextEdit" name="text_edit">
     <property name="geometry">
@@ -43,25 +47,43 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="action_file"/>
-    <addaction name="actionOpen"/>
+    <addaction name="action_new_file"/>
+    <addaction name="action_open"/>
     <addaction name="action_save"/>
-    <addaction name="actionSave_with"/>
+    <addaction name="action_save_with"/>
     <addaction name="separator"/>
-    <addaction name="actionout_2"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="action_out"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionCopy"/>
-    <addaction name="actionPate"/>
-    <addaction name="actionCut"/>
-    <addaction name="actionRedo"/>
-    <addaction name="actionUndo"/>
+    <addaction name="action_copy"/>
+    <addaction name="action_paste"/>
+    <addaction name="action_cut"/>
+    <addaction name="action_redo"/>
+    <addaction name="action_undo"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>Format</string>
+    </property>
+    <addaction name="action_color"/>
+    <addaction name="action_background"/>
+    <addaction name="action_font"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="action_about"/>
    </widget>
    <addaction name="menuEditor"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -77,16 +99,17 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="action_file"/>
-   <addaction name="actionOpen"/>
+   <addaction name="action_new_file"/>
+   <addaction name="action_open"/>
    <addaction name="action_save"/>
-   <addaction name="actionCopy"/>
-   <addaction name="actionPate"/>
-   <addaction name="actionCut"/>
-   <addaction name="actionRedo"/>
-   <addaction name="actionUndo"/>
+   <addaction name="action_copy"/>
+   <addaction name="action_paste"/>
+   <addaction name="action_cut"/>
+   <addaction name="action_redo"/>
+   <addaction name="action_undo"/>
+   <addaction name="actionPrint"/>
   </widget>
-  <action name="actionOpen">
+  <action name="action_open">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/open.png</normaloff>:/assets/open.png</iconset>
@@ -107,12 +130,12 @@
     <string>Ctrl+S</string>
    </property>
   </action>
-  <action name="actionSave_with">
+  <action name="action_save_with">
    <property name="text">
     <string>Save with</string>
    </property>
   </action>
-  <action name="actionCopy">
+  <action name="action_copy">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/copy.png</normaloff>:/assets/copy.png</iconset>
@@ -124,7 +147,7 @@
     <string>Ctrl+C</string>
    </property>
   </action>
-  <action name="actionPate">
+  <action name="action_paste">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/paste.png</normaloff>:/assets/paste.png</iconset>
@@ -136,7 +159,7 @@
     <string>Ctrl+V</string>
    </property>
   </action>
-  <action name="actionCut">
+  <action name="action_cut">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/cut.png</normaloff>:/assets/cut.png</iconset>
@@ -148,7 +171,7 @@
     <string>Ctrl+X</string>
    </property>
   </action>
-  <action name="action_file">
+  <action name="action_new_file">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/file.png</normaloff>:/assets/file.png</iconset>
@@ -160,7 +183,7 @@
     <string>Ctrl+N</string>
    </property>
   </action>
-  <action name="actionout_2">
+  <action name="action_out">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/close.png</normaloff>:/assets/close.png</iconset>
@@ -172,7 +195,7 @@
     <string>Ctrl+Q</string>
    </property>
   </action>
-  <action name="actionRedo">
+  <action name="action_redo">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/redo.png</normaloff>:/assets/redo.png</iconset>
@@ -181,13 +204,58 @@
     <string>Redo</string>
    </property>
   </action>
-  <action name="actionUndo">
+  <action name="action_undo">
    <property name="icon">
     <iconset resource="assets.qrc">
      <normaloff>:/assets/undo.png</normaloff>:/assets/undo.png</iconset>
    </property>
    <property name="text">
     <string>Undo</string>
+   </property>
+  </action>
+  <action name="action_color">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/assets/cor.png</normaloff>:/assets/cor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="action_background">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/assets/background.png</normaloff>:/assets/background.png</iconset>
+   </property>
+   <property name="text">
+    <string>Background</string>
+   </property>
+  </action>
+  <action name="action_font">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/assets/font.png</normaloff>:/assets/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/assets/about.png</normaloff>:/assets/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="assets.qrc">
+     <normaloff>:/assets/print.png</normaloff>:/assets/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
    </property>
   </action>
  </widget>
