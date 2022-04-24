@@ -163,13 +163,48 @@ void Text_Editor::on_action_save_with_triggered()
      file.close();
 
 }
+```
+
+## 
+- As outras feature, como copiar, colar,recortar existem funções prontas para serem aplicadas
 
 
+``` c++
 
 
+void Text_Editor::on_action_copy_triggered()
+{
+    ui->text_edit->copy();
+}
 
+
+void Text_Editor::on_action_paste_triggered()
+{
+    ui->text_edit->paste();
+}
+
+
+void Text_Editor::on_action_cut_triggered()
+{
+    ui->text_edit->cut();
+}
+
+
+void Text_Editor::on_action_redo_triggered()
+{
+    ui->text_edit->redo();
+}
+
+
+void Text_Editor::on_action_undo_triggered()
+{
+    ui->text_edit->undo();
+}
 
 ```
+
+
+
 
 
 
