@@ -1,2 +1,27 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/">
+        <file>assets/undo.png</file>
+        <file>assets/search.png</file>
+        <file>assets/save.png</file>
+        <file>assets/right.png</file>
+        <file>assets/redo.png</file>
+        <file>assets/print.png</file>
+        <file>assets/paste.png</file>
+        <file>assets/open.png</file>
+        <file>assets/list.png</file>
+        <file>assets/left.png</file>
+        <file>assets/highlight.png</file>
+        <file>assets/grammar.png</file>
+        <file>assets/font.png</file>
+        <file>assets/file.png</file>
+        <file>assets/edit.png</file>
+        <file>assets/cut.png</file>
+        <file>assets/cor.png</file>
+        <file>assets/copy.png</file>
+        <file>assets/close.png</file>
+        <file>assets/clear.png</file>
+        <file>assets/center.png</file>
+        <file>assets/background.png</file>
+        <file>assets/about.png</file>
+    </qresource>
+</RCC>

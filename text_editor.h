@@ -15,6 +15,11 @@ public:
     Text_Editor(QWidget *parent = nullptr);
     ~Text_Editor();
 
+private slots:
+
+
+    void on_action_file_triggered();
+
 private:
     Ui::Text_Editor *ui;
 };
